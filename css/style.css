@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
-/*  Noto serif = {4, 5, 7, 9}
-    Roboto = {4^2, 5, 7} */
 * {
   padding: 0;
   margin: 0;
@@ -17,9 +15,16 @@ a:link, a:visited {
   color: white;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 body {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
   background-image: url(/img/frontBG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +35,6 @@ nav {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 nav #nav-logo {
@@ -43,6 +47,7 @@ nav #nav-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
   font-size: 2em;
   font-weight: 700;
   -webkit-transition: text-shadow 0.5s;
@@ -78,6 +83,7 @@ nav #nav-link-wrap a {
   border: 2px solid #fff;
   border-radius: 30px;
   text-align: center;
+  /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
   font-size: 1em;
   font-weight: 700;
   -webkit-transition: 0.5s;
@@ -88,5 +94,19 @@ nav #nav-link-wrap a:hover {
   background-color: rgba(255, 255, 255, 0.9);
   border-color: rgba(255, 255, 255, 0.9);
   color: #006360;
+}
+
+#slogan {
+  position: absolute;
+  top: 42%;
+  right: 4%;
+}
+
+#slogan h1 {
+  /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
+  font-size: 2.5em;
+  font-weight: 900;
+  color: whitesmoke;
+  text-shadow: 0 0 20px rgba(245, 245, 245, 0.95);
 }
 /*# sourceMappingURL=style.css.map */
