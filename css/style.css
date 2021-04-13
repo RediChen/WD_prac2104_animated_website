@@ -7,11 +7,54 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: white;
+}
+
 body {
   width: 100%;
   min-height: 100%;
   background-image: url(/img/frontBG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+nav {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav #nav-logo {
+  height: 64px;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav #nav-hbg {
+  display: block;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-hbg {
+    display: none;
+  }
+}
+
+nav #nav-link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
