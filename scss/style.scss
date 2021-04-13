@@ -40,6 +40,10 @@ nav {
         display: flex;
         align-items: center;
         @include fontSet(2em, 700);
+        transition: text-shadow 0.5s;
+        &:hover {
+            text-shadow: 0 0 50px rgba(whitesmoke,0.6);
+        }
     }
     #nav-hbg {
         @media screen and (min-width: $desktop) {
@@ -56,9 +60,10 @@ nav {
             margin-right: 2em;
             background-color: transparent;
             border: 2px solid #fff;
-            border-radius: 20px;
+            border-radius: 30px;
             text-align: center;
             @include fontSet(1em, 700);
+            transition: 0.5s;
             &:hover {
                 $color-seagreen: rgba(#fff, 0.9);
                 background-color: $color-seagreen;
