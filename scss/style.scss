@@ -26,9 +26,12 @@ a {
     clear: both;
     display: table;//magic trick
 }
-body {
+html, body {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+}
+body {
+    overflow: hidden;
     position: relative;
     background-image: url(/img/frontBG.jpg);
     background-repeat: no-repeat;
@@ -81,11 +84,18 @@ nav {
 }
 #slogan {
     position: absolute;
-    top: 42%;
-    right: 4%;
+    top: 38%;
+    right: 6%;
     h1 {
-        @include fontSet(2.5em, 900) ;
+        @include fontSet(3em, 900) ;
         color:whitesmoke;
         text-shadow: 0 0 20px rgba(whitesmoke,0.95);
     }
+}
+#bubbles {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
