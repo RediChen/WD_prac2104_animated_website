@@ -59,7 +59,15 @@ nav {
         @media screen and (min-width: $desktop) {
             display: none;
         }
-        display: block;
+        @media screen and (max-width: $tablet) {
+            display: block;
+            height: 32px;
+            width: 32px;
+            background: url("../icons/iconHBG.png") rgba(snow, 0.75);
+            background-size: 32px 32px;
+            border-radius: 20%;
+            margin: 0 20px 0 auto;
+        }
     }
     #nav-link-wrap {
         display: flex;
@@ -104,18 +112,18 @@ nav {
     img {
         // $e-func : cubic-bezier(.22,.61,.36,1) ;
         animation: bubble 7s ease-in infinite backwards;
-        $para: 3 ;
+        $para: 3;
         @for $k from 1 through 7 {
             &:nth-child(#{$k}) {
-                $para : ($para*3) % 7 ;
+                $para: ($para * 3) % 7;
                 animation-delay: $para * 2.5s;
             }
         }
         object-fit: contain;
-        &:nth-child(3n+2) {
+        &:nth-child(3n + 2) {
             width: 40px;
         }
-        &:nth-child(5n+1) {
+        &:nth-child(5n + 1) {
             width: 20px;
         }
     }
