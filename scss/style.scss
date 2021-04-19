@@ -37,6 +37,9 @@ body {
     background-image: url(../img/frontBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: $tablet) {
+        background-position: 21% 0;
+    }
 }
 nav {
     margin: 15px 0;
@@ -71,22 +74,37 @@ nav {
     }
     #nav-link-wrap {
         display: flex;
-        float: right;
         a {
             display: block;
-            padding: 5px 40px;
-            margin-right: 2em;
-            background-color: transparent;
-            border: 2px solid #fff;
-            border-radius: 30px;
-            text-align: center;
-            @include fontSet(1em, 700);
-            transition: 0.5s;
-            &:hover {
-                $color-seagreen: rgba(#fff, 0.9);
-                background-color: $color-seagreen;
-                border-color: $color-seagreen;
-                color: #006360;
+        }
+        @media screen and (min-width: $desktop) {
+            float: right;
+            a {
+                margin-right: 2em;
+                background-color: transparent;
+                border: 2px solid #fff;
+                border-radius: 30px;
+                text-align: center;
+                @include fontSet(1em, 700);
+                transition: 0.5s;
+                &:hover {
+                    $color-seagreen: rgba(#fff, 0.9);
+                    background-color: $color-seagreen;
+                    border-color: $color-seagreen;
+                    color: #006360;
+                }
+            }
+        }
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            width: 100%;
+            background-color: rgba(#fff, 0.25);
+            a {
+                padding: 0.5em 0;
+                text-align: center;
+                &:active {
+                    background-color: rgba(#fff, 0.45);
+                }
             }
         }
     }
@@ -96,9 +114,15 @@ nav {
     top: 38%;
     right: 6%;
     h1 {
-        @include fontSet(3em, 900);
         color: whitesmoke;
         text-shadow: 0 0 20px rgba(whitesmoke, 0.95);
+        @media screen and (min-width: $desktop) {
+            @include fontSet(3em, 900);
+        }
+        @media screen and (max-width: $tablet) {
+            @include fontSet(1.8em, 900);
+            text-align: center;
+        }
     }
 }
 #bubbles {

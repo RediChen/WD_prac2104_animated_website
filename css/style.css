@@ -36,6 +36,12 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    background-position: 21% 0;
+  }
+}
+
 nav {
   margin: 15px 0;
   width: 100%;
@@ -86,28 +92,51 @@ nav #nav-link-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: right;
 }
 
 nav #nav-link-wrap a {
   display: block;
-  padding: 5px 40px;
-  margin-right: 2em;
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  text-align: center;
-  /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
-  font-size: 1em;
-  font-weight: 700;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
-nav #nav-link-wrap a:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
-  color: #006360;
+@media screen and (min-width: 1025px) {
+  nav #nav-link-wrap {
+    float: right;
+  }
+  nav #nav-link-wrap a {
+    margin-right: 2em;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-align: center;
+    /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
+    font-size: 1em;
+    font-weight: 700;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  nav #nav-link-wrap a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: #006360;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-link-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  nav #nav-link-wrap a {
+    padding: 0.5em 0;
+    text-align: center;
+  }
+  nav #nav-link-wrap a:active {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
 }
 
 #slogan {
@@ -117,11 +146,25 @@ nav #nav-link-wrap a:hover {
 }
 
 #slogan h1 {
-  /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
-  font-size: 3em;
-  font-weight: 900;
   color: whitesmoke;
   text-shadow: 0 0 20px rgba(245, 245, 245, 0.95);
+}
+
+@media screen and (min-width: 1025px) {
+  #slogan h1 {
+    /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
+    font-size: 3em;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #slogan h1 {
+    /*  Noto serif = {4, 5, 7, 9}, Roboto = {4^2, 5, 7} */
+    font-size: 1.8em;
+    font-weight: 900;
+    text-align: center;
+  }
 }
 
 #bubbles {
