@@ -41,6 +41,22 @@ body {
         background-position: 21% 0;
     }
 }
+#slogan {
+    position: absolute;
+    top: 38%;
+    right: 6%;
+    h1 {
+        color: whitesmoke;
+        text-shadow: 0 0 20px rgba(whitesmoke, 0.95);
+        @media screen and (min-width: $desktop) {
+            @include fontSet(3em, 900);
+        }
+        @media screen and (max-width: $tablet) {
+            @include fontSet(1.8em, 900);
+            text-align: center;
+        }
+    }
+}
 nav {
     margin: 15px 0;
     width: 100%;
@@ -81,6 +97,7 @@ nav {
             float: right;
             a {
                 margin-right: 2em;
+                padding: 0.5em 2em;
                 background-color: transparent;
                 border: 2px solid #fff;
                 border-radius: 30px;
@@ -96,35 +113,25 @@ nav {
             }
         }
         @media screen and (max-width: $tablet) {
+            display: flex;
+            display: none;
             flex-direction: column;
+            margin-top: 50px;
             width: 100%;
-            background-color: rgba(#fff, 0.25);
+            background-color: rgba(#fff, 0.45);
             a {
-                padding: 0.5em 0;
+                padding: 1em 0;
                 text-align: center;
+                text-shadow: 0 0 4px #1e675e;
+                // transition-delay: 300ms;
                 &:active {
-                    background-color: rgba(#fff, 0.45);
+                    background-color: rgba(#fff, 0.85);
                 }
             }
         }
     }
 }
-#slogan {
-    position: absolute;
-    top: 38%;
-    right: 6%;
-    h1 {
-        color: whitesmoke;
-        text-shadow: 0 0 20px rgba(whitesmoke, 0.95);
-        @media screen and (min-width: $desktop) {
-            @include fontSet(3em, 900);
-        }
-        @media screen and (max-width: $tablet) {
-            @include fontSet(1.8em, 900);
-            text-align: center;
-        }
-    }
-}
+
 #bubbles {
     position: absolute;
     bottom: 0;
