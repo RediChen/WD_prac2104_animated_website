@@ -139,7 +139,6 @@ nav {
     height: 50px;
     display: flex;
     justify-content: space-around;
-    filter:blur(3px) ;
 
     img {
         // $e-func : cubic-bezier(.22,.61,.36,1) ;
@@ -151,12 +150,16 @@ nav {
                 animation-delay: $para * 2.5s;
             }
         }
+        filter: blur(1px);
         object-fit: contain;
         &:nth-child(3n + 2) {
             width: 40px;
+            filter: blur(2px);
         }
-        &:nth-child(5n + 1) {
+        &:nth-child(even) {
             width: 20px;
+            transform: translateY(-10vh);
+            filter: blur(2px);
         }
     }
 }
