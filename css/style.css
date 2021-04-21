@@ -184,6 +184,8 @@ nav #nav-link-wrap a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 #bubbles img {

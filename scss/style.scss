@@ -139,6 +139,7 @@ nav {
     height: 50px;
     display: flex;
     justify-content: space-around;
+    filter:blur(3px) ;
 
     img {
         // $e-func : cubic-bezier(.22,.61,.36,1) ;
